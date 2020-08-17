@@ -32,7 +32,7 @@ const recursiveSearchPackagePath = (searchPath: string): string | undefined => {
 
 export async function loadProject(basePath: string): Promise<IProjectInfo[]> {
   const translationFiles = glob.sync(
-    path.join(basePath, '**/i18n/messages/*.json'),
+    path.join(basePath, '**/translations/*.json'),
     {
       ignore: [
         '**/build/**',
